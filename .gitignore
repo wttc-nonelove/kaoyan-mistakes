@@ -1,0 +1,27 @@
+# 依赖与构建产物
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# 真题 PDF（版权归原出版方，只放本地，不入库）
+public/seed/
+
+# WorkBuddy 应用标记（本地运行用）
+.wbapp_*.genie
+.workbuddy/
+
+# 编辑器 / 系统
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# 一次性脚本
+split.mjs
+打开错题集.bat

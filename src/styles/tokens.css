@@ -1,0 +1,46 @@
+:root {
+  /* 纸感底色 + 墨绿主色，低饱和长时间看不累 */
+  --bg: #f5f3ee;
+  --bg-grad: radial-gradient(1200px 600px at 10% -10%, #eef3ef 0%, transparent 60%),
+             radial-gradient(900px 500px at 100% 0%, #f7efe6 0%, transparent 55%);
+  --surface: #ffffff;
+  --surface-2: #fbfaf6;
+  --surface-3: #f1efe8;
+
+  --ink: #1e231f;
+  --ink-2: #5a625b;
+  --ink-3: #8d938b;
+  --ink-4: #b3b8b0;
+
+  --line: #e5e1d8;
+  --line-strong: #d3cec2;
+
+  --brand: #2f6f5e;
+  --brand-ink: #24544a;
+  --brand-weak: #e6f0eb;
+  --brand-line: #cfe1d8;
+
+  --danger: #b8452f;
+  --danger-weak: #fbeae6;
+  --warn: #9a6f22;
+  --warn-weak: #f8efdd;
+  --ok: #3f7d58;
+  --ok-weak: #e8f3ec;
+
+  --r-lg: 16px;
+  --r-md: 12px;
+  --r-sm: 8px;
+  --r-xs: 6px;
+
+  --shadow-1: 0 1px 2px rgba(31, 35, 32, 0.04), 0 1px 1px rgba(31, 35, 32, 0.02);
+  --shadow-2: 0 6px 20px rgba(31, 35, 32, 0.07), 0 1px 3px rgba(31, 35, 32, 0.04);
+  --shadow-3: 0 18px 48px rgba(31, 35, 32, 0.16);
+
+  --sidebar-w: 232px;
+  --tabbar-h: 58px;
+  --page-max: 1120px;
+
+  --font: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+  --font-num: 'SF Mono', 'Cascadia Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+}

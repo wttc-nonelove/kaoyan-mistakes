@@ -1,0 +1,155 @@
+/* ============ A4 打印 / 预览 ============ */
+.print-root {
+  display: none;
+}
+
+.print-root.is-preview {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  overflow: auto;
+  background: #e6e3dc;
+  padding: 22px 16px 70px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.print-zoom {
+  zoom: var(--zoom, 1);
+}
+
+.a4-page {
+  background: #fff;
+  margin: 0 auto 18px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  color: #1e231f;
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', system-ui, sans-serif;
+}
+
+.p-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6mm;
+  border-bottom: 0.3mm solid #dcd8ce;
+  box-sizing: border-box;
+}
+.p-head-title {
+  font-size: 9.5pt;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.p-head-meta {
+  font-size: 7.6pt;
+  color: #8d938b;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.p-section {
+  font-size: 15pt;
+  font-weight: 700;
+  color: #24544a;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.p-slice {
+  overflow: hidden;
+  line-height: 0;
+}
+.p-slice img {
+  display: block;
+  max-width: none;
+}
+
+.p-space {
+  border: 0.25mm dashed #d9d5ca;
+  border-radius: 2mm;
+  box-sizing: border-box;
+  margin: 0.6mm 0;
+  position: relative;
+}
+.p-space span {
+  position: absolute;
+  left: 2mm;
+  top: 1.4mm;
+  font-size: 7pt;
+  color: #c3beb2;
+}
+
+.p-text {
+  box-sizing: border-box;
+  color: #2a2f2b;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.p-text.is-strong {
+  font-weight: 600;
+}
+.p-text.is-muted {
+  color: #7b817a;
+}
+
+.p-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5mm;
+  text-align: center;
+  font-size: 8pt;
+  color: #a9aea6;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html,
+  body {
+    background: #fff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .app,
+  .no-print,
+  .tabbar,
+  .sidebar,
+  .toast-wrap,
+  .overlay,
+  .lightbox {
+    display: none !important;
+  }
+  .print-root,
+  .print-root.is-preview {
+    display: block !important;
+    position: static !important;
+    background: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  .print-zoom {
+    zoom: 1 !important;
+  }
+  .a4-page {
+    margin: 0 !important;
+    box-shadow: none !important;
+    break-after: page;
+    page-break-after: always;
+  }
+  .a4-page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+  .print-root.is-preview > .print-hint {
+    display: none !important;
+  }
+}
